@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity">
+
+    <Button
+        android:id="@+id/btnsginout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="304dp"
+        android:layout_marginTop="4dp"
+        android:text="signout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnclearhistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="244dp"
+        android:layout_marginBottom="3dp"
+        android:text="clearhistory"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/RG"
+        android:layout_width="401dp"
+        android:layout_height="228dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="236dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnclearhistory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/brgdelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="delete" />
+
+        <RadioButton
+            android:id="@+id/brgcrossline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="crossline" />
+
+        <RadioButton
+            android:id="@+id/brgRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+    </RadioGroup>
+
+    <ToggleButton
+        android:id="@+id/tbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="4dp"
+        android:text="ToggleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etstay_sign_in"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/etstay_sign_in"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="426dp"
+        android:text="stay_sign_in"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/sch1"
+        app:layout_constraintEnd_toStartOf="@+id/tbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/sch1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="135dp"
+        android:text="keep history"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnclearhistory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etstay_sign_in" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
