@@ -31,7 +31,7 @@ public class SettingActivity extends AppCompatActivity {
         RG=findViewById(R.id.RG);
         brgdelete=findViewById(R.id.brgdelete);
         brgcrossline=findViewById(R.id.brgcrossline);
-        brgRadioButton=findViewById(R.id.brgRadioButton)
+        brgRadioButton=findViewById(R.id.brgRadioButton);
         tbtn=findViewById(R.id.tbtn);
         sch1=findViewById(R.id.sch1);
 

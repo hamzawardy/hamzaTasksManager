@@ -79,7 +79,8 @@
         app:layout_constraintBottom_toTopOf="@+id/sch1"
         app:layout_constraintEnd_toStartOf="@+id/tbtn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Switch
         android:id="@+id/sch1"
@@ -88,10 +89,11 @@
         android:layout_marginStart="11dp"
         android:layout_marginEnd="14dp"
         android:layout_marginBottom="135dp"
-        android:text="keep history"
+        android:text="keephistory"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnclearhistory"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etstay_sign_in" />
+        app:layout_constraintTop_toBottomOf="@+id/etstay_sign_in"
+        tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
