@@ -1,10 +1,10 @@
 package tasks.hamza.hamzatasksmanager;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.SearchView;
 
 public class HistoryActivity extends AppCompatActivity {
 
