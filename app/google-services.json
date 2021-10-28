@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "280308466660",
+    "project_id": "hamzatasksmanager",
+    "storage_bucket": "hamzatasksmanager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:280308466660:android:2a326cdaae354aae66bdf1",
+        "android_client_info": {
+          "package_name": "tasks.hamza.hamzatasksmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "280308466660-nch8ugtsrs49581h5133s1uudbb7g487.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB773UJj0fzeMhfh3g8-4-fTcW4UQjlDIc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "280308466660-nch8ugtsrs49581h5133s1uudbb7g487.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
