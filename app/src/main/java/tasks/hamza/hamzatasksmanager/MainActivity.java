@@ -5,6 +5,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,8 +14,9 @@ import android.widget.ListView;
 import android.widget.SearchView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+      //
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements DialogInterface.OnClickListener {
 
     private FloatingActionButton fab2;
     private SearchView svsearchtask;
@@ -53,20 +55,29 @@ public class MainActivity extends AppCompatActivity {
         if(item.getItemId()==R.id.mnItmSginUp)
         {
             AlertDialog.Builder builder =new AlertDialog.Builder(this);
-            //
             builder.setMessage("Are you sure?");
-            //
-            builder.setCancelable(false);
-            //
-            //builder.setPositiveButton("yes",this);
-            //builder.setNegativeButton("no",this);
-            //
+            builder.setCancelable(true);
+            builder.setPositiveButton("Yes",  this);
+            //builder.setPositiveButton("no",this);
             AlertDialog dialog=builder.create();
-            //
             dialog.show();
+            Intent i=new Intent(getApplicationContext(),SignInActivity.class);
+            startActivity(i);
 
         }
 
         return true;
     }
+
+    @Override
+    public void onClick(DialogInterface dialogInterface,int i) {
+
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
+    }
+
+
 }
