@@ -29,71 +29,69 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        fab2=findViewById(R.id.fab2);
-        svsearchtask=findViewById(R.id.svsearchtask);
-        lstvalltasks=findViewById(R.id.lstvalltasks);
+        fab2 = findViewById(R.id.fab2);
+        svsearchtask = findViewById(R.id.svsearchtask);
+        lstvalltasks = findViewById(R.id.lstvalltasks);
 
 
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
+
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item)
-    {
-       if(item.getItemId()==R.id.mnItmHistory)
-       {
-           Intent i=new Intent(getApplicationContext(),HistoryActivity.class);
-           startActivity(i);
-       }
-       if(item.getItemId()==R.id.mnItmSetting)
-       {
-           Intent i=new Intent(getApplicationContext(),SettingActivity.class);
-           startActivity(i);
-       }
-        if(item.getItemId()==R.id.mnItmSginUp)
-        {
-            AlertDialog.Builder builder =new AlertDialog.Builder(this);
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.mnItmHistory) {
+            Intent i = new Intent(getApplicationContext(), HistoryActivity.class);
+            startActivity(i);
+        }
+        if (item.getItemId() == R.id.mnItmSetting) {
+            Intent i = new Intent(getApplicationContext(), SettingActivity.class);
+            startActivity(i);
+        }
+        if (item.getItemId() == R.id.mnItmSginUp) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("Are you sure?");
             builder.setCancelable(true);//
 
-            builder.setPositiveButton("Yes",  this);
+            builder.setPositiveButton("Yes", this);
+            builder.setPositiveButton("no", this);
+            builder.setCancelable(true);
+            builder.setPositiveButton("Yes", this);
             builder.setPositiveButton("no",this);
-            AlertDialog dialog=builder.create();
+
+            AlertDialog dialog = builder.create();
             dialog.show();
-            Intent i=new Intent(getApplicationContext(),SignInActivity.class);
+            Intent i = new Intent(getApplicationContext(), SignInActivity.class);
             startActivity(i);
 
         }
 
         return true;
     }
-
     //listener 2
 
     @Override
-    public void onClick(DialogInterface dialogInterface,int i) {
-        if(i==dialogInterface.BUTTON_POSITIVE)
-        {
+    public void onClick(DialogInterface dialogInterface, int i) {
+        if (i == dialogInterface.BUTTON_POSITIVE) {
             Toast.makeText(getApplicationContext(), "loging out", Toast.LENGTH_SHORT).show();
             finish();
         }
-        if(i==dialogInterface.BUTTON_POSITIVE)
-        {
+        if (i == dialogInterface.BUTTON_POSITIVE) {
             Toast.makeText(getApplicationContext(), "loging out canceled", Toast.LENGTH_SHORT).show();
             dialogInterface.cancel();
 
         }
 
+        }
+
+        @Override
+        public void onPointerCaptureChanged(boolean hasCapture){
+
+        }
+
 
     }
-
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
-    }
-
-
-}
