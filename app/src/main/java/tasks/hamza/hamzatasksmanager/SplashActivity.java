@@ -14,5 +14,20 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         ivp=findViewById(R.id.ivp);
+
+        Thread th=new Thread(){
+            @Override
+            public void run() {
+                //هنا المقطع الذي يعمل بالتزامن مع مقاطع اخرى
+              int i=3*1000;
+                try {
+                    sleep(i);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+
+
     }
 }
