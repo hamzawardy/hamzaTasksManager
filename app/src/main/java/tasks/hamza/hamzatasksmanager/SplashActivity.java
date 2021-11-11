@@ -2,6 +2,7 @@ package tasks.hamza.hamzatasksmanager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 
@@ -18,16 +19,23 @@ public class SplashActivity extends AppCompatActivity {
         Thread th=new Thread(){
             @Override
             public void run() {
-                //هنا المقطع الذي يعمل بالتزامن مع مقاطع اخرى
-              int i=3*1000;
+                //   هنا المقطع الذي يعمل بالتزامن مع مقاطع اخرى
+              int ms=3*1000;//millisecond
                 try {
-                    sleep(i);
+                    sleep(ms);
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
         };
+        //Thread: 4
+        th.start();
 
 
     }
 }
+
+
+
+
